@@ -1,4 +1,10 @@
 
+@media (max-width: 600px) {
+.container {
+
+padding: 5px;
+
+}
 
 body {
   background-color: black;
