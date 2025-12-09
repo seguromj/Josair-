@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia Premium - Agendamento Online</title>
+    <title>Barbearia Jhow Alves - Estilo e Inovação</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Variáveis de Cores (Azul Marinho e Cinzas) */
+        /* Variáveis de Cores */
         :root {
-            --cor-principal: #003366; /* Azul Marinho (Escuro) */
-            --cor-secundaria: #A9A9A9; /* Cinza Claro (Detalhe) */
-            --cor-fundo: #FFFFFF; /* Branco/Cinza Claríssimo */
-            --cor-texto: #333333;
-            --cor-botao-texto: #FFFFFF; 
-        }
 
-        /* Restante do CSS mantido para o design */
+--cor-primaria: #1F3851; /*
+
+Azul Marinho Escuro (Fundo/Navbar) */
+
+--cor-secundaria: #0055AA; /*
+
+Azul Destaque (Linhas/Acentos) */
+
+--cor-fundo-claro: #F0F0F0; /
+
+* Cinza Muito Claro */
+
+--cor-texto-escuro: #333333;
+
+--cor-texto-claro: #FFFFFF;
+
+--cor-cinza-claro: #CCCCCC;
+
+-cor-cinza-medio: #666666;
+
+--cor-botao-principal:
+
+#003366; /* Azul Marinho para Botões de Ação */}
+
+        /* Reset Básico */
         * {
             margin: 0;
             padding: 0;
@@ -25,10 +43,10 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
+            background-color: var(--cor-fundo-claro);
+            color: var(--cor-texto-escuro);
         }
 
         .container {
@@ -39,52 +57,39 @@
             padding: 0 10px;
         }
 
+        /* Tipografia */
         h1, h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--cor-principal);
+            font-family: 'Oswald', sans-serif;
+            color: var(--cor-primaria);
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
         h2 {
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            text-transform: uppercase;
+            font-size: 2.8em;
+            margin-bottom: 50px;
             letter-spacing: 2px;
-            border-bottom: 3px solid var(--cor-principal);
+            border-bottom: 3px solid var(--cor-secundaria);
             display: inline-block;
             padding-bottom: 5px;
+            color: var(--cor-primaria);
         }
 
-        /* Estilo do Botão ÚNICO (Destaque) */
-        .btn {
-            display: inline-block;
-            background: var(--cor-principal);
-            color: var(--cor-botao-texto);
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s, transform 0.2s;
-            font-weight: 700;
-            font-size: 1.1em;
-            text-transform: uppercase;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--cor-primaria);
+            margin-bottom: 10px;
         }
 
-        .btn:hover {
-            background: #004D99; 
-            transform: translateY(-2px);
-        }
-        
+        /* --- Navbar --- */
         .navbar {
-            background: var(--cor-principal); 
+            background: var(--cor-primaria);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .navbar .container {
@@ -94,11 +99,12 @@
         }
 
         .logo {
-            font-size: 1.8em;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2em;
             font-weight: 700;
-            color: var(--cor-fundo); 
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            color: var(--cor-secundaria);
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .navbar ul {
@@ -107,21 +113,21 @@
         }
 
         .navbar ul li a {
-            color: var(--cor-fundo); 
+            color: var(--cor-texto-claro);
             text-decoration: none;
-            padding: 0 15px;
+            padding: 0 18px;
             transition: color 0.3s;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .navbar ul li a:hover {
-            color: var(--cor-secundaria); 
+            color: var(--cor-secundaria);
         }
 
         /* --- Hero Section --- */
         .hero {
-            background: url('SUA_IMAGEM_CLASSICA_AQUI.jpg') no-repeat center center/cover;
-            min-height: 60vh;
+            background: url('SUA_IMAGEM_DE_FUNDO_JHOW.jpg') no-repeat center center/cover;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             text-align: center;
@@ -135,83 +141,264 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 51, 102, 0.5); 
+            background: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
 
         .hero .container {
             position: relative;
             z-index: 2;
+            padding: 20px;
         }
 
         .hero h1 {
-            font-size: 3.5em;
-            color: var(--cor-fundo); 
-            text-shadow: 1px 1px 3px #000;
+            font-size: 4.5em;
+            margin-bottom: 10px;
+            color: var(--cor-secundaria);
+            text-shadow: 2px 2px 5px #000;
+            line-height: 1.1;
         }
 
         .hero p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            color: #E0E0E0;
+            font-size: 1.6em;
+            margin-bottom: 40px;
+            color: var(--cor-cinza-claro);
+            text-shadow: 1px 1px 3px #000;
         }
 
-        /* --- Seções Gerais --- */
+        /* --- Botão Animado Agendamento --- */
+        .animated-btn-wrapper {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .animated-button {
+            background-color: var(--cor-secundaria);
+            color: var(--cor-texto-claro);
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8em;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .animated-button:hover {
+            background-color: #CC9933;
+            transform: translateY(-3px);
+        }
+
+        .animated-button span {
+            display: inline-block;
+            animation: bounceText 2s infinite ease-in-out;
+            text-transform: uppercase; 
+        }
+
+        @keyframes bounceText {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        /* --- Galeria de Cortes --- */
         .section {
             padding: 80px 0;
-            background-color: var(--cor-fundo);
+            background-color: var(--cor-fundo-claro);
         }
 
-        /* --- Seção de Agendamento SIMPLIFICADA --- */
-        .agendamento {
-            text-align: center;
-            background-color: #F8F8F8;
-            padding-bottom: 80px;
+        .section-dark {
+            background-color: var(--cor-primaria);
+            color: var(--cor-texto-claro);
         }
         
-        .agendamento-box {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 30px;
-            background: var(--cor-fundo);
-            border: 1px solid #ddd;
+        .section-dark h2 {
+            color: var(--cor-secundaria);
+            border-bottom-color: var(--cor-cinza-medio);
+        }
+        
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .corte-item {
+            text-align: center;
+            background: var(--cor-texto-claro);
+            padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-        }
-        
-        .agendamento-box p {
-            margin-bottom: 25px;
-            font-size: 1.1em;
-            color: var(--cor-texto);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
 
-        /* --- Rodapé (Footer) --- */
-        footer {
-            background: var(--cor-principal);
-            color: var(--cor-secundaria);
-            text-align: center;
-            padding: 30px 0;
-            font-size: 0.9em;
+        .corte-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .corte-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--cor-secundaria);
+            margin-bottom: 10px;
         }
         
-        footer a {
-            color: var(--cor-secundaria);
+        /* --- Modal (Card de Agendamento) --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: var(--cor-fundo-claro);
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .close-button {
+            color: var(--cor-cinza-medio);
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--cor-primaria);
             text-decoration: none;
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-options {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .modal-option-btn {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid var(--cor-secundaria);
+            background-color: var(--cor-texto-claro);
+            color: var(--cor-primaria);
+            font-size: 1.1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .modal-option-btn:hover, .modal-option-btn.active {
+            background-color: var(--cor-secundaria);
+            color: var(--cor-texto-claro);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Formulários dentro do Modal */
+        .appointment-form {
+            display: none;
+            padding: 20px;
+            border: 1px solid var(--cor-cinza-claro);
+            border-radius: 8px;
+            background-color: #FDFDFD;
+        }
+
+        .appointment-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--cor-texto-escuro);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--cor-cinza-claro);
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: var(--cor-fundo-claro);
+            color: var(--cor-texto-escuro);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        .form-submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--cor-primaria);
+            color: var(--cor-texto-claro);
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            margin-top: 15px;
         }
 
         /* Responsividade */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5em;
+                font-size: 3em;
+            }
+            .animated-button {
+                font-size: 1.4em;
+                padding: 12px 30px;
             }
             .navbar .container {
                 flex-direction: column;
             }
-            .navbar ul {
-                padding-top: 10px;
-            }
-            .navbar ul li {
-                margin-bottom: 5px;
+            .modal-options {
+                flex-direction: column;
             }
         }
     </style>
@@ -220,43 +407,302 @@
 
     <nav class="navbar">
         <div class="container">
-            <span class="logo">A BARBEARIA CLÁSSICA</span>
+            <span class="logo">JHOW ALVES</span>
             <ul>
                 <li><a href="#hero">Início</a></li>
-                <li><a href="#agendamento">Agendar</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#cortes">Cortes</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#" id="navAgendarBtn">Agendar</a></li>
             </ul>
         </div>
     </nav>
 
     <header id="hero" class="hero">
         <div class="container">
-            <h1>A Tradição Encontra o Seu Estilo.</h1>
-            <p>Serviço premium em um ambiente que celebra a arte da barbearia clássica.</p>
-            <a href="#agendamento" class="btn">RESERVE SUA EXPERIÊNCIA</a>
+            <h1>Barbearia Jhow Alves</h1>
+            <p>Seu estilo, nossa paixão. Cortes modernos e clássicos com excelência.</p>
+            <div class="animated-btn-wrapper">
+                <button class="animated-button" id="openAppointmentModal">
+                    Agende Seu Horário
+                </button>
+            </div>
         </div>
     </header>
 
-    <section id="agendamento" class="section agendamento">
+    <section id="cortes" class="section">
         <div class="container">
-            <h2 style="color: var(--cor-principal);">Agendamento Online</h2>
-            
-            <div class="agendamento-box">
-                <p>Para garantir que você veja **todos os horários disponíveis em tempo real**, clique no botão abaixo e utilize nosso sistema online. Você poderá **escolher o dia, a hora e o seu barbeiro** sem risco de agendamento duplicado.</p>
+            <h2>Nossos Estilos</h2>
+            <div class="galeria-grid">
+                
+                <div class="corte-item">
+                    <img src="https://via.placeholder.com/120x120/E0B34D/0A0A0A?text=Fade" alt="Corte Fade">
+                    <h3>Corte Degradê (Fade)</h3>
+                    <p>Modernidade e suavidade.</p>
+                </div>
+                <div class="corte-item">
+                    <img src="https://via.placeholder.com/120x120/E0B34D/0A0A0A?text=Classico" alt="Corte Clássico">
+                    <h3>Corte Clássico</h3>
+                    <p>Elegância atemporal.</p>
+                </div>
+                <div class="corte-item">
+                    <img src="https://via.placeholder.com/120x120/E0B34D/0A0A0A?text=Razor" alt="Barba Navalha">
+                    <h3>Barba na Navalha</h3>
+                    <p>Precisão e cuidado.</p>
+                </div>
+                <div class="corte-item">
+                    <img src="https://via.placeholder.com/120x120/E0B34D/0A0A0A?text=Undercut" alt="Corte Undercut">
+                    <h3>Undercut</h3>
+                    <p>Visual ousado e prático.</p>
+                </div>
+                <div class="corte-item">
+                    <img src="https://via.placeholder.com/120x120/E0B34D/0A0A0A?text=Textura" alt="Corte com Textura">
+                    <h3>Corte Texturizado</h3>
+                    <p>Volume e movimento.</p>
+                </div>
+                <div class="corte-item">
+                    <img src="https://via.placeholder.com/120x120/E0B34D/0A0A0A?text=Kids" alt="Corte Infantil">
+                    <h3>Corte Infantil</h3>
+                    <p>Estilo para os pequenos.</p>
+                </div>
 
-                <a href="https://calendar.app.google/9f1ALmCAYFxb75Gy9" target="_blank" class="btn">
-                    VER HORÁRIOS DISPONÍVEIS E AGENDAR
-                </a>
             </div>
-            
+        </div>
+    </section>
+
+    <section id="sobre" class="section section-dark">
+        <div class="container">
+            <h2>Sobre a Barbearia</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>Na Barbearia Jhow Alves, cada cliente é único. Combinamos técnicas tradicionais com as últimas tendências em cortes e cuidados masculinos. Nossa missão é proporcionar não apenas um novo visual, mas uma experiência de bem-estar e confiança. Com Jhow Alves, você garante um atendimento personalizado e um resultado impecável.</p>
+                    <p>Venha nos visitar e transforme seu estilo em um ambiente moderno e acolhedor.</p>
+                </div>
+                <div class="sobre-image">
+                    <img src="SUA_IMAGEM_SOBRE_NOS.jpg" alt="Interior da Barbearia Jhow Alves">
+                </div>
+            </div>
         </div>
     </section>
 
     <footer id="contato">
         <div class="container">
-            <p>&copy; 2025 A Barbearia Clássica. | Endereço: Rua da Tradição, 100 | Telefone: <a href="tel:XX-XXXX-XXXX">(XX) XXXX-XXXX</a></p>
+            <p>&copy; 2024 Barbearia Jhow Alves. Todos os direitos reservados. | Endereço: Rua da Inovação, 456, Centro | Telefone: <a href="tel:XX-XXXX-XXXX">(XX) XXXX-XXXX</a></p>
+            <p>Siga-nos: <a href="LINK_INSTAGRAM" target="_blank">Instagram</a> | <a href="LINK_FACEBOOK" target="_blank">Facebook</a></p>
         </div>
     </footer>
 
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-header">
+                <h3>Escolha seu tipo de Agendamento</h3>
+            </div>
+            
+            <div class="modal-options">
+                <button class="modal-option-btn active" data-form="formBarbearia">
+                    Agendamento na Barbearia
+                </button>
+                <button class="modal-option-btn" data-form="formDomicilio">
+                    Agendamento a Domicílio
+                </button>
+            </div>
+
+            <form id="formBarbearia" class="appointment-form active">
+                <div class="form-group">
+                    <label for="nomeBarbearia">Seu Nome:</label>
+                    <input type="text" id="nomeBarbearia" required>
+                </div>
+                <div class="form-group">
+                    <label for="corteBarbearia">Tipo de Corte:</label>
+                    <select id="corteBarbearia" required>
+                        <option value="">-- Selecione o Serviço --</option>
+                        <option value="Corte Degradê (Fade)">Corte Degradê (Fade)</option>
+                        <option value="Corte Clássico">Corte Clássico</option>
+                        <option value="Barba na Navalha">Barba na Navalha</option>
+                        <option value="Combo Corte + Barba">Combo Corte + Barba</option>
+                        <option value="Corte Infantil">Corte Infantil</option>
+                        <option value="Outro Serviço">Outro Serviço</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="barbeiroBarbearia">Barbeiro:</label>
+                    <input type="text" id="barbeiroBarbearia" value="Jhow Alves" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="dataBarbearia">Data Desejada:</label>
+                    <input type="date" id="dataBarbearia" required>
+                </div>
+                <div class="form-group">
+                    <label for="horaBarbearia">Horário Desejado:</label>
+                    <input type="time" id="horaBarbearia" required>
+                </div>
+                <button type="submit" class="form-submit-btn">SOLICITAR AGENDAMENTO NA BARBEARIA</button>
+            </form>
+
+            <form id="formDomicilio" class="appointment-form">
+                <div class="form-group">
+                    <label for="nomeDomicilio">Seu Nome:</label>
+                    <input type="text" id="nomeDomicilio" required>
+                </div>
+                <div class="form-group">
+                    <label for="corteDomicilio">Tipo de Corte:</label>
+                    <select id="corteDomicilio" required>
+                        <option value="">-- Selecione o Serviço --</option>
+                        <option value="Corte Degradê (Fade)">Corte Degradê (Fade)</option>
+                        <option value="Corte Clássico">Corte Clássico</option>
+                        <option value="Barba na Navalha">Barba na Navalha</option>
+                        <option value="Combo Corte + Barba">Combo Corte + Barba</option>
+                        <option value="Corte Infantil">Corte Infantil</option>
+                        <option value="Outro Serviço">Outro Serviço</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="barbeiroDomicilio">Barbeiro:</label>
+                    <input type="text" id="barbeiroDomicilio" value="Jhow Alves" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="dataDomicilio">Data Desejada:</label>
+                    <input type="date" id="dataDomicilio" required>
+                </div>
+                <div class="form-group">
+                    <label for="horaDomicilio">Horário Desejado:</label>
+                    <input type="time" id="horaDomicilio" required>
+                </div>
+                
+                <fieldset class="form-group" style="border: 1px solid var(--cor-cinza-claro); padding: 15px; border-radius: 5px; margin-top: 20px;">
+                    <legend style="color: var(--cor-primaria); font-weight: 600; padding: 0 5px;">Endereço Completo</legend>
+                    <div class="form-group">
+                        <label for="bairroDomicilio">Bairro:</label>
+                        <input type="text" id="bairroDomicilio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cepDomicilio">CEP:</label>
+                        <input type="text" id="cepDomicilio" placeholder="Ex: 00000-000" pattern="\d{5}-?\d{3}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ruaDomicilio">Rua/Avenida:</label>
+                        <input type="text" id="ruaDomicilio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="complementoDomicilio">Número e Complemento:</label>
+                        <textarea id="complementoDomicilio" rows="2" placeholder="Ex: N° 123, Apt 45, Bloco B"></textarea>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="form-submit-btn">SOLICITAR AGENDAMENTO A DOMICÍLIO</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // *** CONFIGURAÇÃO CRÍTICA: SUBSTITUA SEUNUMERO ***
+        const whatsappNumber = "5562995679219"; 
+
+        // --- Animação do Botão ---
+        const animatedButton = document.getElementById('openAppointmentModal');
+        const navAgendarBtn = document.getElementById('navAgendarBtn');
+        const buttonText = animatedButton.textContent.trim();
+        animatedButton.innerHTML = ''; 
+
+        for (let i = 0; i < buttonText.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = buttonText[i] === ' ' ? '\u00A0' : buttonText[i]; // Mantém espaços
+            span.style.animationDelay = `${i * 0.1}s`;
+            animatedButton.appendChild(span);
+        }
+
+        // --- Lógica do Modal ---
+        const modal = document.getElementById("appointmentModal");
+        const openBtn = document.getElementById("openAppointmentModal");
+        const closeBtn = document.getElementsByClassName("close-button")[0];
+        const optionBtns = document.querySelectorAll(".modal-option-btn");
+        const forms = document.querySelectorAll(".appointment-form");
+
+        function openModal() {
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        openBtn.onclick = openModal;
+        navAgendarBtn.onclick = openModal;
+        closeBtn.onclick = closeModal;
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Lógica de Alternância de Formulários
+        optionBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                optionBtns.forEach(b => b.classList.remove('active'));
+                forms.forEach(f => f.classList.remove('active'));
+
+                this.classList.add('active');
+
+                const targetFormId = this.dataset.form;
+                document.getElementById(targetFormId).classList.add('active');
+            });
+        });
+
+        // --- FUNÇÃO AUXILIAR: Formatar Data ---
+        function formatarData(dataISO) {
+             try {
+                 const dataObj = new Date(dataISO + 'T00:00:00'); 
+                 return dataObj.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+            } catch (error) {
+                 return dataISO;
+            }
+        }
+
+        // --- Lógica de Envio para WhatsApp: FORMULÁRIO BARBEARIA ---
+        document.getElementById('formBarbearia').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nomeBarbearia').value;
+            const corte = document.getElementById('corteBarbearia').value;
+            const barbeiro = document.getElementById('barbeiroBarbearia').value;
+            const data = document.getElementById('dataBarbearia').value;
+            const hora = document.getElementById('horaBarbearia').value;
+            
+            const dataFormatada = formatarData(data);
+
+            const mensagem = `*SOLICITAÇÃO DE AGENDAMENTO NA BARBEARIA JHOW ALVES*%0A%0ACliente: ${nome}%0AServiço: ${corte}%0ABarbeiro: ${barbeiro}%0ADia: ${dataFormatada}%0AHora: ${hora}%0A%0A*Aguardando Confirmação do Horário.*`;
+
+            const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${mensagem}`;
+            window.open(whatsappLink, '_blank');
+            closeModal();
+        });
+
+        // --- Lógica de Envio para WhatsApp: FORMULÁRIO DOMICÍLIO ---
+        document.getElementById('formDomicilio').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nomeDomicilio').value;
+            const corte = document.getElementById('corteDomicilio').value;
+            const barbeiro = document.getElementById('barbeiroDomicilio').value;
+            const data = document.getElementById('dataDomicilio').value;
+            const hora = document.getElementById('horaDomicilio').value;
+            
+            const bairro = document.getElementById('bairroDomicilio').value;
+            const cep = document.getElementById('cepDomicilio').value;
+            const rua = document.getElementById('ruaDomicilio').value;
+            const complemento = document.getElementById('complementoDomicilio').value;
+
+            const dataFormatada = formatarData(data);
+
+            const mensagem = `*SOLICITAÇÃO DE AGENDAMENTO A DOMICÍLIO*%0A%0ACliente: ${nome}%0AServiço: ${corte}%0ABarbeiro: ${barbeiro}%0A%0A*Detalhes do Agendamento:*%0ADia: ${dataFormatada}%0AHora: ${hora}%0A%0A*Endereço:*%0ABairro: ${bairro}%0ACEP: ${cep}%0ARua/Av: ${rua}%0AComplemento: ${complemento}%0A%0A*Aguardando Confirmação e Cálculo da Taxa.*`;
+
+            const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${mensagem}`;
+            window.open(whatsappLink, '_blank');
+            closeModal();
+        });
+    </script>
+
 </body>
 </html>
+
